@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "b8802050-9b9b-4e6e-a2ae-c3a18a65b505",
+		"name": "examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createEstudiante",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"nombre\" : \"Fatima Lopez\",\r\n    \"edad\" : 29,\r\n    \"ciudad\" : \"Cali\",\r\n    \"zoneId\" : \"Bogota\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/controlador/crearEstudiante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"crearEstudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEstudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/controlador/estudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createExamen",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"zoneId\" : \"Bogota\",\r\n    \"preguntas\" : [\r\n        {\r\n            \"pregunta\" : \"¿Quién descubrió América?\",\r\n            \"opcion\" : {\r\n                \"resp_A\" : \"Napoleon\",\r\n                \"resp_B\" : \"Cristobal Colon\",\r\n                \"resp_C\" : \"Cleopatra\",\r\n                \"resp_D\" : \"Benito Juarez\"\r\n            },\r\n            \"respuesta\" : \"B\"\r\n        },\r\n        {\r\n            \"pregunta\" : \"¿Cuanto es la mitad de 2 + 2?\",\r\n            \"opcion\" : {\r\n                \"resp_A\" : \"1\",\r\n                \"resp_B\" : \"2\",\r\n                \"resp_C\" : \"3\",\r\n                \"resp_D\" : \"4\"\r\n            },\r\n            \"respuesta\" : \"C\"\r\n        },\r\n        {\r\n            \"pregunta\" : \"¿Quién desarrolló Facebook?\",\r\n            \"opcion\" : {\r\n                \"resp_A\" : \"Mark Zuckerberg\",\r\n                \"resp_B\" : \"Bill Gates\",\r\n                \"resp_C\" : \"Steve Wozniak\",\r\n                \"resp_D\" : \"Steve Jobs\"\r\n            },\r\n            \"respuesta\" : \"A\"\r\n        },\r\n        {\r\n            \"pregunta\" : \"¿Cuantos continentes hay en el mundo?\",\r\n            \"opcion\" : {\r\n                \"resp_A\" : \"1\",\r\n                \"resp_B\" : \"9\",\r\n                \"resp_C\" : \"4\",\r\n                \"resp_D\" : \"5\"\r\n            },\r\n            \"respuesta\" : \"D\"\r\n        },\r\n        {\r\n            \"pregunta\" : \"¿Cuál es la montaña mas grande del mundo?\",\r\n            \"opcion\" : {\r\n                \"resp_A\" : \"Nevado de Toluca\",\r\n                \"resp_B\" : \"Popocatepelt\",\r\n                \"resp_C\" : \"Everest\",\r\n                \"resp_D\" : \"Machupichu\"\r\n            },\r\n            \"respuesta\" : \"C\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/controlador/crearExamen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"crearExamen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getExamenes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/controlador/examenes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"examenes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEstudianteByZoneId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/controlador/estudiante/Bogota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"estudiante",
+						"Bogota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getExamenByZoneId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/controlador/examen/Bogota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"examen",
+						"Bogota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAgendaExamen",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaExamen\" : \"21/08/2022\",\r\n    \"zoneId\" : \"Bogota\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/controlador/fechaExamen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"fechaExamen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "responderExamen",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"respuestas\" : {\r\n        \"respuesta_1\" : \"C\",\r\n        \"respuesta_2\" : \"C\",\r\n        \"respuesta_3\" : \"A\",\r\n        \"respuesta_4\" : \"D\",\r\n        \"respuesta_5\" : \"C\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/controlador/responderExamen/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"responderExamen",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRespuesta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/controlador/getRespuesta/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"getRespuesta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calificarEstudiante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/controlador/getCalificarEstudiante/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"controlador",
+						"getCalificarEstudiante",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
